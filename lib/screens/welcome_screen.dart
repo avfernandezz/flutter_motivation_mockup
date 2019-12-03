@@ -1,4 +1,5 @@
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:carousel_pro/carousel_pro.dart';
+
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -11,20 +12,16 @@ class WelcomeScreen extends StatelessWidget {
       Image.asset('images/girl_cone.jpg')
     ];
     return Container(
-      child: CarouselSlider(
-        items: items,
-        height: 400,
-        aspectRatio: 16 / 9,
-        viewportFraction: 0.8,
-        initialPage: 0,
-        enableInfiniteScroll: true,
-        reverse: false,
-        autoPlay: true,
-        autoPlayInterval: Duration(seconds: 3),
-        autoPlayAnimationDuration: Duration(milliseconds: 800),
-        pauseAutoPlayOnTouch: Duration(seconds: 10),
-        enlargeCenterPage: true,
-        scrollDirection: Axis.horizontal,
+      child: Carousel(
+        images: items,
+        boxFit: BoxFit.fitHeight,
+//        [
+//          NetworkImage(
+//              'https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
+//          NetworkImage(
+//              'https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
+//          ExactAssetImage("assets/images/LaunchImage.jpg")
+//        ],
       ),
     );
   }
