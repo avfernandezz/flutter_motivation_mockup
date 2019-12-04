@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_selfmotivation/common/constants.dart';
 import 'package:flutter_selfmotivation/components/menu_card.dart';
+import 'package:flutter_selfmotivation/model/category.dart';
 import 'package:flutter_selfmotivation/screens/content_screen.dart';
 
 class CatalogScreen extends StatelessWidget {
@@ -93,21 +94,33 @@ class CatalogScreen extends StatelessWidget {
                 crossAxisCount: 2,
                 children: <Widget>[
                   MenuCard(
-                    imageSource: 'girl_mirror.jpg',
-                    label: 'Travel Journal',
+                    category: Category(
+                      id: 1,
+                      image: 'girl_mirror.jpg',
+                      label: 'Travel Journal',
+                    ),
                     clickDestination: ContentScreen.id,
                   ),
                   MenuCard(
-                      imageSource: 'girl_flower.png',
-                      label: 'Unsent Letter',
+                      category: Category(
+                        id: 2,
+                        image: 'girl_flower.png',
+                        label: 'Unsent Letter',
+                      ),
                       clickDestination: ContentScreen.id),
                   MenuCard(
-                      imageSource: 'girl_flowers.jpg',
-                      label: 'Rethinking Loneliness',
+                      category: Category(
+                        id: 3,
+                        image: 'girl_flowers.jpg',
+                        label: 'Rethinking Loneliness',
+                      ),
                       clickDestination: ContentScreen.id),
                   MenuCard(
-                      imageSource: 'girl_cone.jpg',
-                      label: 'Letting Go',
+                      category: Category(
+                        id: 4,
+                        image: 'girl_cone.jpg',
+                        label: 'Letting Go',
+                      ),
                       clickDestination: ContentScreen.id),
                 ],
               ),
